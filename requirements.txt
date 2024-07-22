@@ -1,0 +1,11 @@
+numpy
+sentence-transformers
+torch
+fasttext-langdetect
+spacy
+asyncio
+httpx
+loguru
+selectolax
+pyopenssl
+streamlit

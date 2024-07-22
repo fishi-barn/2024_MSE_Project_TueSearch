@@ -1,0 +1,5 @@
+[
+    {"label": "ORG", "pattern": "Max Planck Institute"},
+    {"label": "ORG", "pattern": [{"LOWER": "max"}, {"LOWER": "planck"}, {"LOWER": "institute"}]},
+    {"label": "LINK", "pattern": [{"LIKE_URL": "True"}]}
+]
