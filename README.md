@@ -37,6 +37,7 @@ The repository is organized into several directories:
 - Need to download index which is a large file => need to install git lfs
   - using PackageCloud.io
     - `!curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash`
+    - `sudo apt-get install git-lfs` (for debian-based linux systems such as ubuntu)
   - or download tar.gz and install manually
     - `https://git-lfs.com/`
 - Requirements file is supplied for python packages
