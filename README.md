@@ -23,7 +23,18 @@ The repository is organized into several directories:
 
 ### 1. Clone the Repository
 
-- `git clone`
+- Need to download index which is a large file (~120mb) => need to install git-lfs
+  - Download and install git-lfs
+    - using PackageCloud.io
+      - `!curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash`
+      - `sudo apt-get install git-lfs` (for debian-based linux systems such as ubuntu)
+    - or download tar.gz and install manually from their official [website](https://git-lfs.com/).
+  - Configure git for lfs (will only download a pointer to the lfs file)
+    - `git lfs install --skip-smudge`
+  - Clone the repository
+    - `git clone https://github.com/fishi-barn/2024_MSE_Project_TueSearch.git`
+  - In the cloned repository, pull the index with lfs
+    - `git lfs pull --include=index.json`
 
 ### 2. Set Up a Virtual Environment (Optional but Recommended)
 
@@ -34,12 +45,6 @@ The repository is organized into several directories:
 ### 3. Install Required Packages
 
 - Built in `python 3.10`
-- Need to download index which is a large file => need to install git lfs
-  - using PackageCloud.io
-    - `!curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash`
-    - `sudo apt-get install git-lfs` (for debian-based linux systems such as ubuntu)
-  - or download tar.gz and install manually
-    - `https://git-lfs.com/`
 - Requirements file is supplied for python packages
     - `pip install -r requirements.txt`
 
