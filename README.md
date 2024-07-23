@@ -1,4 +1,4 @@
-# Tuesearch
+# TueSearch
 **Authors**: Stephan Amann, Tanja Huber, Markus Potthast, Tina Truong
 
 **Date**: 22.07.2024
@@ -46,19 +46,26 @@ The repository is organized into several directories:
 
 - Built in `python 3.10`
 - Requirements file is supplied for python packages
-    - `pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
-### 4. Run The Notebooks
+### 4. Run TheSearch
 
-- Single queries and query files are possible
-    - `tse.search("query")`
-    - `tse.search_from_file("queries.txt")`
-- Using jupyter
-    - `jupyter notebook MSE_24_Group_Projects.ipynb`
-- Run in IDE with notebook support
+You need a common browser to run the search engine. Type in your cli (with activated environment):
+```
+streamlit run app.py
+```
+Additionally you can use the search engine with python, submitting a query string or even a file:
+```
+from tue_search import TuebingenSearchEngine as TSE 
+tse = TSE()
 
-### 5. Run Web Page with Streamlit
+# single query
+tse.search("query")
 
-It is possible to run streamlit over the notebook or by running streamlit in terminal
+# load queries from file
+tse.search_from_file("queries.txt")
+```
+Have a look in MSE_24_Group_Projects.ipynb`
 
-- `streamlit run app.py`
